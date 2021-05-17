@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="goods">
+    <select id="selectAll" resultType="com.imooc.mybatis.entity.Goods">
+        select * from t_goods order by goods_id desc limit 10
+    </select>
+<!--    单参数传递 parameterType:数据类型  数据填入#{value}-->
+    <select id="selectById" parameterType="Integer" resultType="com.imooc.mybatis.entity.Goods">
+        select * from t_goods where goods_id = #{value}
+    </select>
+<!--多参数传递 parameterType:Map键值对 数据填入#{}-->
+    <select id="selectByPriceRange" parameterType="java.util.Map" resultType="com.imooc.mybatis.entity.Goods">
+        select * from t_goods
+        where
+            current_price between #{min} and #{max}
+        order by current_price
+        limit 0, #{limit}
+    </select>
+</mapper>
