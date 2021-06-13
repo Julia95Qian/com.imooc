@@ -20,7 +20,7 @@
     <environments default="dev">
         <!--        配置环境,不同的环境不同的id名字-->
         <environment id="dev">
-            <!--            采用JDBC方式对数据库事务进行commit//rollback-->
+            <!--            采用JDBC方式对数据库事务进行commit/rollback-->
             <transactionManager type="JDBC"></transactionManager>
             <!--            采用连接池方式管理数据库连接-->
             <dataSource type="POOLED">
@@ -31,7 +31,7 @@
             </dataSource>
         </environment>
         <environment id="prd">
-            <!--            采用JDBC方式对数据库事务进行commit//rollback-->
+            <!--            采用JDBC方式对数据库事务进行commit/rollback-->
             <transactionManager type="JDBC"></transactionManager>
             <!--            采用连接池方式管理数据库连接-->
             <dataSource type="com.imooc.mybatis.datasource.C3P0DataSourceFactory">

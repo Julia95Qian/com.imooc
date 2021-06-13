@@ -114,8 +114,7 @@
                 and category_id = #{categoryId}
             </if>
             <if test="currentPrice != null">
-                and current_price &lt; #{currentPrice} //占位符
-                <
+                and current_price &lt; #{currentPrice}
             </if>
         </where>
     </select>
@@ -133,7 +132,7 @@
     </resultMap>
     <select id="selectOneToMany" resultMap="rmGoods1">
         select *
-        from t_goods limit 0,10
+        from t_goods limit 0,1
     </select>
 
     <select id="selectPage" resultType="com.imooc.mybatis.entity.Goods">

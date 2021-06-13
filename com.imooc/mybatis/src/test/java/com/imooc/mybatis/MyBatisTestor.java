@@ -226,6 +226,43 @@ public class MyBatisTestor {
     }
 
     /**
+     * 前x条数据的信息
+     */
+    @Test
+    public void testOneToMany() {
+        SqlSession session = null;
+        try {
+            session = MyBatisUtils.openSession();
+            List<Goods> list = session.selectList("goods.selectOneToMany");
+            for (Goods g : list) {
+                System.out.println(g.getTitle() + ":" +
+                        g.getGoodsDetails().size());
+            }
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            MyBatisUtils.closeSession(session);
+        }
+    }
+    /**
+     * 前x条数据的图片信息
+     */
+    @Test
+    public void testManyToOne() throws Exception {
+        SqlSession session = null;
+        try {
+            session = MyBatisUtils.openSession();
+            List<GoodsDetail> list = session.selectList("goodsDetail.selectManyToOne");
+            for (GoodsDetail gd : list) {
+                System.out.println(gd.getGdPicUrl() + ":"+gd.getGoods());
+            }
+        }catch (Exception e){
+            throw e;
+        }finally {
+            MyBatisUtils.closeSession(session);
+        }
+    }
+    /**
      * PageHelper分页查询
      */
     @Test
@@ -256,6 +293,7 @@ public class MyBatisTestor {
     /**
      * 批量插入测试
      */
+    @Test
     public void testBatchInsert() throws Exception{
         SqlSession session = null;
         try {
