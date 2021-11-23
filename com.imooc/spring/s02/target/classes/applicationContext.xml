@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="c1" class="com.imooc.spring.ioc.entity.Computer">
+        <constructor-arg name="brand" value="联想"/>
+        <constructor-arg name="type" value="台式机"/>
+        <constructor-arg name="seriesNumber" value="82849135"/>
+        <constructor-arg name="price" value="7000"/>
+    </bean>
+    <bean id="company" class="com.imooc.spring.ioc.entity.Company">
+        <property name="rooms">
+            <set>
+                <value>2001-CEORoom</value>
+                <value>2003-developerRoom</value>
+                <value>2010-meetingRoom</value>
+            </set>
+        </property>
+        <property name="computers">
+            <map>
+                <!--方法一: value-ref引用-->
+                <entry key="dev-88172" value-ref="c1"></entry>
+                <!--方法二: 内置bean默认为关联对象-->
+                <entry key="dev-88173">
+                    <bean class="com.imooc.spring.ioc.entity.Computer">
+                        <constructor-arg name="brand" value="戴尔"/>
+                        <constructor-arg name="type" value="笔记本"/>
+                        <constructor-arg name="seriesNumber" value="61275988"/>
+                        <constructor-arg name="price" value="6500"/>
+                    </bean>
+                </entry>
+            </map>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="phone">010-12345678</prop>
+                <prop key="address">xxRoadxxBuilding</prop>
+                <prop key="website">http://www.imooc.com</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

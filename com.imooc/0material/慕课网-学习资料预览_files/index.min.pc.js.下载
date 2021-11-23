@@ -1,0 +1,15 @@
+if(window.addEventListener) {
+	document.addEventListener('contextmenu',function(e){
+			e.preventDefault();
+			},false);
+	window.addEventListener('keydown', function (e) {
+			e.preventDefault();
+			}, false);
+}else {
+	document.attachEvent('oncontextmenu',function(e) {
+			window.event.returnValue = false;
+			});
+	window.attachEvent('onkeydown', function (e) {
+			e.preventDefault();
+			}, false);
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+<!--    case1: 环绕通知-->
+<!--    <bean id="bookShop" class="com.imooc.spring.aop.dao.BookShop"/>-->
+<!--    <bean id="methodPro" class="com.imooc.spring.aop.aspect.MethodPro"></bean>-->
+<!--    <aop:config>-->
+<!--        <aop:pointcut id="pointcut" expression="execution(* com.imooc..*.*(..))"></aop:pointcut>-->
+<!--        <aop:aspect ref="methodPro">-->
+<!--            <aop:around method="welcome" pointcut-ref="pointcut"/>-->
+<!--        </aop:aspect>-->
+<!--    </aop:config>-->
+<!--    case2: 基于注解-->
+    <context:component-scan base-package="com.imooc"/>
+    <aop:aspectj-autoproxy/>
+</beans>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a3aab45f-b622-4936-96d2-ad76b7c9f8a6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../0material/第一阶段基础框架搭建/第一阶段 基础框架搭建/imooc-oa/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0material/第一阶段基础框架搭建/第一阶段 基础框架搭建/imooc-oa/.idea/artifacts/imooc_oa_Web_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0material/第一阶段基础框架搭建/第一阶段 基础框架搭建/imooc-oa/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0material/第一阶段基础框架搭建/第一阶段 基础框架搭建/imooc-oa/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0material/第一阶段基础框架搭建/第一阶段 基础框架搭建/imooc-oa/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0material/第一阶段基础框架搭建/第一阶段 基础框架搭建/imooc-oa/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0material/第一阶段基础框架搭建/第一阶段 基础框架搭建/imooc-oa/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0material/第一阶段基础框架搭建/第一阶段 基础框架搭建/imooc-oa/imooc-oa.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aop/aop/src/main/java/com/imooc/spring/aop/SpringApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aop/aop/src/main/java/com/imooc/spring/aop/aspect/MethodChecker.aj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aop/aop/src/main/java/com/imooc/spring/aop/dao/EmployeeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aop/aop/src/main/java/com/imooc/spring/aop/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aop/aop/src/main/java/com/imooc/spring/aop/service/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aop/aop/src/main/java/com/imooc/spring/aop/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../aop/aop/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../imoocOA/imoocOA.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../imoocOA/src/main/java/com/imooc/oa/datasource/DruidDataSourceFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../imoocOA/src/main/java/com/imooc/oa/test/TestServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../imoocOA/src/main/java/com/imooc/oa/utils/MybatisUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../imoocOA/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../imoocOA/src/main/resources/mappers/test.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../imoocOA/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../imoocOA/src/main/webapp/WEB-INF/ftl/test.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../imoocOA/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../imoocOA/src/test/java/com/imooc/oa/utils/MybatisUtilsTestor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../imoocaop/aop/s02/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s02/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s02/src/main/java/com/imooc/spring/ioc/SpringApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s02/src/main/java/com/imooc/spring/ioc/entity/Company.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s02/src/main/java/com/imooc/spring/ioc/entity/Computer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s02/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s03_annotation/src/main/java/com/imooc/spring/ioc/SpringApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s03_annotation/src/main/java/com/imooc/spring/ioc/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s03_annotation/src/main/java/com/imooc/spring/ioc/dao/IUserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s03_annotation/src/main/java/com/imooc/spring/ioc/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s03_annotation/src/main/java/com/imooc/spring/ioc/dao/UserDao2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s03_annotation/src/main/java/com/imooc/spring/ioc/services/DepartmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s03_annotation/src/main/java/com/imooc/spring/ioc/services/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s03_annotation/src/main/java/com/imooc/spring/ioc/utils/StringUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s03_annotation/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s03_annotation/src/main/resources/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s04_javaconfig/src/main/java/com/imooc/spring/ioc/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s04_javaconfig/src/main/java/com/imooc/spring/ioc/SpringApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s04_javaconfig/src/main/java/com/imooc/spring/ioc/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s04_javaconfig/src/main/java/com/imooc/spring/ioc/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s04_javaconfig/src/main/java/com/imooc/spring/ioc/service/UserService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1xO9a0WovHVewCdKdjrV1IG0gWK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../imoocaop/aop/s02" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a3aab45f-b622-4936-96d2-ad76b7c9f8a6" name="Default Changelist" comment="" />
+      <created>1630215327098</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1630215327098</updated>
+      <workItem from="1630215328778" duration="197000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

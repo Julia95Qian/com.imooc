@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>try RESTful</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(function (){
+            $("#btnGet").click(function (){
+                $.ajax({
+                    url: "restful/request",
+                    type: "get",
+                    dataType: "json",
+                    success: function (json){
+                        $("#message").text(json.message);
+                    }
+                })
+            })
+        })
+        $(function (){
+            $("#btnPost").click(function (){
+                $.ajax({
+                    url: "restful/request",
+                    type: "post",
+                    dataType: "json",
+                    success: function (json){
+                        $("#message").text(json.message);
+                    }
+                })
+            })
+        })
+        $(function (){
+            $("#btnPut").click(function (){
+                $.ajax({
+                    url: "restful/request",
+                    type: "put",
+                    dataType: "json",
+                    success: function (json){
+                        $("#message").text(json.message);
+                    }
+                })
+            })
+        })
+        $(function (){
+            $("#btnDelete").click(function (){
+                $.ajax({
+                    url: "restful/request",
+                    type: "delete",
+                    dataType: "json",
+                    success: function (json){
+                        $("#message").text(json.message);
+                    }
+                })
+            })
+        })
+        $(function (){
+            $("#btnPersons").click(function (){
+                $.ajax({
+                    url: "restful/persons",
+                    type: "get",
+                    dataType: "json",
+                    success: function (json){
+                        console.log("json", json);
+                        for (let i=0; i<json.length; i++){
+                            let p = json[i];
+                            $("#divPersons").append("<h2>" + p.name + ":" + p.age + "-" + p.birthday + "</h2>")
+                        }
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+<input type="button" id="btnGet" value="send Get request">
+<input type="button" id="btnPost" value="send Post request">
+<input type="button" id="btnPut" value="send Put request">
+<input type="button" id="btnDelete" value="send Delete request">
+<h1 id="message"></h1>
+<input type="button" id="btnPersons" value="get all">
+<div id="divPersons"></div>
+</body>
+</html>

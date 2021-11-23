@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--猫狗年龄-->
+    <bean id="cat" class="com.imooc.spring.ioc.entity.Cat">
+        <property name="username" value="喵喵"/>
+        <property name="age" value="2"/>
+    </bean>
+    <bean id="dog" class="com.imooc.spring.ioc.entity.Dog">
+        <property name="username" value="汪汪"/>
+        <property name="age" value="5"/>
+    </bean>
+    <!--性别衣着-->
+    <bean id="dress" class="com.imooc.spring.ioc.entity.Clothes">
+        <property name="color" value="红色"/>
+        <property name="style" value="连衣裙"/>
+    </bean>
+    <bean id="suit" class="com.imooc.spring.ioc.entity.Clothes">
+        <property name="color" value="蓝色"/>
+        <property name="style" value="西装"/>
+    </bean>
+    <bean id="girl" class="com.imooc.spring.ioc.entity.Person">
+        <property name="name" value="女生"/>
+        <property name="clothes" ref="dress"/>
+    </bean>
+    <bean id="boy" class="com.imooc.spring.ioc.entity.Person">
+        <property name="name" value="男生"/>
+        <property name="clothes" ref="suit"/>
+    </bean>
+    <!--bean无参构造与带参构造方法-->
+    <bean id="book" class="com.imooc.spring.ioc.entity.Book">
+    </bean>
+    <bean id="bookParam" class="com.imooc.spring.ioc.entity.Book">
+        <constructor-arg name="name" value="bookName"/>
+        <constructor-arg name="number" value="123"/>
+        <constructor-arg name="price" value="123"/>
+    </bean>
+</beans>
