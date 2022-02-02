@@ -1,10 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
 </head>
 <body>
-$END$
+<div>
+    <form action="ajax/emp" method="get">
+        <input type="button" id="emp" name="emp" value="员工列表">
+        <input type="button" id="post" name="post" value="职位列表">
+        <input type="button" id="depar" name="depar" value="部门列表">
+    </form>
+</div>
+<div id="container"></div>
+<script type="text/javascript" src="jquery-3.6.0.js"></script>
+<script type="text/javascript">
+
+    $("#emp").click(function() {
+        $.ajax({
+            "url": "ajax/emp",
+            "type": "get",
+            "data": "flag=emp",
+            "dataType": "json",
+            "success": function (json){
+                console.log(json);
+                var html = "";
+                for (var i = 0; i < json.length; i++) {
+                    html = html + "<div>" + json[i] + "</div>";
+                }
+                document.getElementById("container").innerHTML = html;
+            },
+            "error": function (xmlhttp, errorText){
+                console.log(xmlhttp);
+                console.log(errorText);
+                if(xmlhttp.status == "405"){
+                    alert("无效的请求方式");
+                }else if(xmlhttp.status == "404"){
+                    alert("未找到URL资源");
+                }else if (xmlhttp.status == "500"){
+                    alert("内部服务器错误");
+                }else{
+                    alert("产生异常");
+                }
+            }
+        })
+        // initAjax("GET", "ajax/emp?flag=emp", true);
+    });
+    $("#post").click(function() {
+        initAjax("GET", "ajax/emp?flag=post", true);
+    });
+    $("#depar").click(function() {
+        initAjax("GET", "ajax/emp?flag=depar", true);
+    });
+    /*给ajax赋值，传递三个参数：表单提交方式，路径，是否异步提交*/
+    function initAjax(obj, url, flag) {
+        var xmlhttp;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.open(obj, url, flag);
+        xmlhttp.send();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                var content = xmlhttp.responseText;
+                var json = JSON.parse(content);
+                console.log(json);
+                var html = "";
+                for (var i = 0; i < json.length; i++) {
+                    html = html + "<div>" + json[i] + "</div>";
+                }
+                document.getElementById("container").innerHTML = html;
+            }
+        }
+    }
+</script>
 </body>
 </html>
