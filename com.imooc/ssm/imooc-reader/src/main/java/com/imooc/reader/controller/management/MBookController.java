@@ -35,7 +35,8 @@ public class MBookController {
 
     /**
      * wangEditor文件上传
-     * @param file 上传文件
+     *
+     * @param file    上传文件
      * @param request 原生请求对象
      * @return
      * @throws IOException
@@ -56,9 +57,10 @@ public class MBookController {
         result.put("data", new String[]{"/upload/" + fileName + suffix});
         return result;
     }
+
     @PostMapping("/create")
     @ResponseBody
-    public Map createBook(Book book){
+    public Map createBook(Book book) {
         Map result = new HashMap();
         try {
             book.setEvaluationQuantity((float) 0);
@@ -77,13 +79,14 @@ public class MBookController {
         }
         return result;
     }
+
     @GetMapping("/list")
     @ResponseBody
-    public Map list(Integer page, Integer limit){
-        if(page == null){
+    public Map list(Integer page, Integer limit) {
+        if (page == null) {
             page = 1;
         }
-        if(limit == null){
+        if (limit == null) {
             limit = 10;
         }
         IPage<Book> pageObject = bookService.paging(null, null, page, limit);
@@ -92,6 +95,58 @@ public class MBookController {
         result.put("msg", "success");
         result.put("data", pageObject.getRecords());
         result.put("count", pageObject.getTotal());
+        return result;
+    }
+
+    @GetMapping("/id/{id}")
+    @ResponseBody
+    public Map selectById(@PathVariable("id") Long bookId) {
+        Book book = bookService.selectById(bookId);
+        Map result = new HashMap();
+        result.put("code", "0");
+        result.put("msg", "success");
+        result.put("data", book);
+        return result;
+    }
+
+    @PostMapping("/update")
+    @ResponseBody
+    public Map updateBook(Book book){
+        Map result = new HashMap();
+        try {
+            Book rawBook = bookService.selectById(book.getBookId());
+            rawBook.setBookName(book.getBookName());
+            rawBook.setSubTitle(book.getSubTitle());
+            rawBook.setAuthor(book.getAuthor());
+            rawBook.setCategoryId(book.getCategoryId());
+            rawBook.setDescription(book.getDescription());
+            Document document = Jsoup.parse(book.getDescription());
+            String cover = document.select("img").first().attr("src");
+            rawBook.setCover(cover);
+            bookService.updateBook(rawBook);
+            result.put("code", "0");
+            result.put("msg", "success");
+        } catch (BussinessException e) {
+            e.printStackTrace();
+            result.put("code", e.getCode());
+            result.put("msg", e.getMsg());
+        }
+        return result;
+    }
+
+    @GetMapping("/delete/{id}")
+    @ResponseBody
+    public Map deleteBook(@PathVariable("id") Long bookId) {
+        Map result = new HashMap();
+        try {
+            bookService.deleteBook(bookId);
+            result.put("code", "0");
+            result.put("msg", "success");
+        } catch (BussinessException e) {
+            e.printStackTrace();
+            result.put("code", e.getCode());
+            result.put("msg", e.getMsg());
+        }
         return result;
     }
 }

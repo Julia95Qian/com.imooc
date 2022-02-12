@@ -48,6 +48,26 @@
     path: '/list',
     component: './TableList',
   },
+  // 图书管理页面
+  {
+    name: 'library',
+    icon: 'smile',
+    path: '/library',
+    routes: [
+      {
+        name: 'book-management',
+        path: '/library/book-management',
+        icon: 'smile',
+        component: './BookManagement',
+      },
+      {
+        name: 'comment-management',
+        path: '/library/comment-management',
+        icon: 'smile',
+        component: './CommentManagement',
+      },
+    ],
+  },
   {
     path: '/',
     redirect: '/welcome',

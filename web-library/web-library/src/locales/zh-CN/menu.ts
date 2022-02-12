@@ -49,4 +49,7 @@ export default {
   'menu.editor.flow': '流程编辑器',
   'menu.editor.mind': '脑图编辑器',
   'menu.editor.koni': '拓扑编辑器',
+  'menu.library': '图书后台管理', 
+  'menu.library.book-management': '图书管理', 
+  'menu.library.comment-management': '短评管理', 
 };
