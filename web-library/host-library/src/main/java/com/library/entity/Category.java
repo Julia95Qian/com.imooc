@@ -1,8 +1,9 @@
-package com.imooc.reader.entity;
+package com.library.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 /*图书分类实体类*/
 @TableName("category")
 public class Category {

@@ -1,7 +1,7 @@
-package com.imooc.reader.mapper;
+package com.library.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.imooc.reader.entity.Evaluation;
+import com.library.entity.Evaluation;
 
 public interface EvaluationMapper extends BaseMapper<Evaluation> {
 

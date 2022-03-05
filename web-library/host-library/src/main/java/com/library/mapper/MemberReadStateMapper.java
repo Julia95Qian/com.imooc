@@ -1,7 +1,7 @@
-package com.imooc.reader.mapper;
+package com.library.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.imooc.reader.entity.MemberReadState;
+import com.library.entity.MemberReadState;
 
 public interface MemberReadStateMapper extends BaseMapper<MemberReadState> {
 

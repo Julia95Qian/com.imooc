@@ -1,4 +1,4 @@
-package com.imooc.reader.entity;
+package com.library.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
